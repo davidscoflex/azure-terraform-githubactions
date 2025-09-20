@@ -1,0 +1,12 @@
+resource_group = "terraform_resgrp"
+location       = "East US"
+network        = "terraform_network"
+subnet         = "terraform_subnet"
+nic            = "terraform_nic"
+vm1            = "terraform-vm"
+size           = "Standard_F2"
+username       = "azureuser"
+password       = "Pass344%%LaiT"
+storage        = "terraformstorage345678"
+environment    = "terraform_stagging"
+
