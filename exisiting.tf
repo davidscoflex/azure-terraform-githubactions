@@ -1,5 +1,5 @@
 # data "azurerm_resource_group" "resourcegroup2" {
-#   name = "existing_resgrp"
+#   name = "test_rsgroup"
 # }
 
 # resource "azurerm_virtual_network" "network2" {
