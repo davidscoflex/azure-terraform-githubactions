@@ -68,10 +68,10 @@
 # }
 
 
-module "vm" {
-  source = "./modules/vm"
-}
+# module "vm" {
+#   source = "./modules/vm"
+# }
 
-module "storage" {
-  source = "./modules/storage"
-}
+# module "storage" {
+#   source = "./modules/storage"
+# }
