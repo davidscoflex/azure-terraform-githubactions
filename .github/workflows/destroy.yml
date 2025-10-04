@@ -1,0 +1,27 @@
+name: Destroy terraform code
+
+on:
+    workflow_dispatch:
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout the code
+              uses: actions/checkout@v5.0.0
+            - name: Az login
+              uses: Azure/login@v2.3.0
+              with:
+                creds: ${{secrets.AZURE_CREDENTIALS}}
+            - name: install terraform
+              uses: hashicorp/setup-terraform@v2.0.3
+            - name: terraform init
+              run: terraform init
+            - name: terraform validate code
+              run: terraform validate
+            - name: terraform format
+              run: terraform fmt
+            - name: terraform plan
+              run: terraform plan
+            - name: Destroy terraform resources
+              run: terraform destroy --auto-approve
