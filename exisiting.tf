@@ -28,7 +28,7 @@ resource "azurerm_network_interface" "nic2" {
   }
 }
 
-resource "azurerm_linux_virtual_machine" "vm2" {
+resource "azurerm_linux_virtual_machine" "vm.10.10.2025" {
   name                            = "terraform-vm2"
   resource_group_name             = data.azurerm_resource_group.resourcegroup2.name
   location                        = data.azurerm_resource_group.resourcegroup2.location
